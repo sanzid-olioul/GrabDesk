@@ -1,6 +1,6 @@
 package server.connection;
 import java.io.Serializable;
-public class ImageInfo {
+public class ImageInfo implements Serializable{
     private int height, width, rgb;
 
     public ImageInfo(int width, int height, int rgb) {

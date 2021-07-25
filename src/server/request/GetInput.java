@@ -3,7 +3,7 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import static server.connection.Server.keyType;
-import server.connection.MouseInfo;
+import client.connection.MouseInfo;
 import java.awt.*;
 import java.awt.event.InputEvent;
 public class GetInput {
@@ -17,11 +17,11 @@ public class GetInput {
         Object[] objs = (Object[]) obj;
         String cls = (String) objs[1];
         Object req = objs[0];
-        System.out.println(req + cls);
+
         if (cls.equals(keyType)) {
             hitKey((KeyEvent) req);
         } else {
-            hitMouse((server.connection.MouseInfo) req, (double) objs[2], (double) objs[3]);
+            hitMouse((MouseInfo) req, (double) objs[2], (double) objs[3]);
         }
     }
 

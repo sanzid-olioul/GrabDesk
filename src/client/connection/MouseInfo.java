@@ -3,7 +3,7 @@ import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 
 import java.io.Serializable;
-public class MouseInfo {
+public class MouseInfo implements Serializable{
     private double sceneX, sceneY;
     private String eventType;
     private MouseButton button;
