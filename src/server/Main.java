@@ -25,7 +25,7 @@ public class Main {
     }
 
     void start() throws Exception {
-        server = new Server("127.0.0.1", 8080);
+        server = new Server("192.168.0.106", 8080);
         getInput = new GetInput();
 
         server.setOnReceive(getInput::onReceive);

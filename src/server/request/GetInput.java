@@ -50,9 +50,11 @@ public class GetInput {
 
     private void hitKey(KeyEvent keyEvent) {
         if (keyEvent.getEventType().equals(KeyEvent.KEY_PRESSED)) {
-            //robot.keyPress(keyEvent.getCode().impl_getCode());
+
+            System.out.println();
+            robot.keyPress((int)keyEvent.getCode().getChar().charAt(0));
         } else if (keyEvent.getEventType().equals(KeyEvent.KEY_RELEASED)) {
-            //robot.keyRelease(keyEvent.getCode().impl_getCode());
+            robot.keyRelease((int)keyEvent.getCode().getChar().charAt(0));
         }
     }
 }

@@ -47,9 +47,7 @@ public class Server {
 
     public void receive() throws Exception {
         Scanner scn = new Scanner(inStream);
-        int i = 0;
         while (scn.hasNextLine()) {
-            System.out.println(i++);
             String line = scn.nextLine();
             byte buff[] = Base64.getDecoder().decode(line);
             onReceive.onReceive(ImageIO.read(
