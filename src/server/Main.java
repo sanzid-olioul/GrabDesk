@@ -13,19 +13,22 @@ import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.Base64;
 public class Main {
-    private static Main main;
     private Server server;
     private GetInput getInput;
     private Thread socketThread, sendThread;
     private SendScreen sendScreen;
 
-    public static void main(String[] args) throws Exception {
-        Main main = new Main();
-        main.start();
+    private String host;
+    private int port;
+
+    public Main(String host,int port) throws Exception {
+        this.host = host;
+        this.port =port;
+        start();
     }
 
     void start() throws Exception {
-        server = new Server("192.168.0.106", 8080);
+        server = new Server(host, port);
         getInput = new GetInput();
 
         server.setOnReceive(getInput::onReceive);

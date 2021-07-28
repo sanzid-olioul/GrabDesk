@@ -77,8 +77,8 @@ public class GuiMain extends Application{
         socketThread.start();
     }
 
-    public static void main(String[] args) throws Exception {
-        launch(args);
+    public void mustRun() throws Exception {
+        launch();
         main = new GuiMain();
     }
 }
