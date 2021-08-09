@@ -21,11 +21,11 @@ public class GrabDeskServer {
         }catch(Exception e){
 
         }
-
+        System.out.println(ipaddress);
         JLabel IP = new JLabel("Host Address : " + ipaddress);
         JLabel PORT = new JLabel("Host Port :  8080");
 
-        IP.setBounds(125,225,150,48);
+        IP.setBounds(125,225,250,48);
         PORT.setBounds(125,300,150,48);
 
 
